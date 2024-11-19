@@ -50,47 +50,47 @@
 </head>
 
 <body>
-    <div class="distribute-wrap" id="distribute-cont">
-        <div class="distribute-header"></div>
-        <div class="distribute-content">
-            <div class="container">
-                <div class="cont">
-                    <div class="icon-wrap">
-						<img id="icon-src" src="#"></div>
-						<div class="info">
-                    </div>
-                    <div class="download">
-                        <a class="download-btn btn-main" id="download_btn"><span>下载应用</span></a>
-                        <p class="system"></p>
-                    </div>
-					<div id="desc"></div>
-                    <div class="download-code">
-                        
-                    </div>
-                    <div class="text-center tip">扫描二维码下载</div>
+<div class="distribute-wrap" id="distribute-cont">
+    <div class="distribute-header"></div>
+    <div class="distribute-content">
+        <div class="container">
+            <div class="cont">
+                <div class="icon-wrap">
+                    <img id="icon-src" src="#"></div>
+                <div class="info">
                 </div>
+                <div class="download">
+                    <a class="download-btn btn-main" id="download_btn"><span>Download App</span></a>
+                    <p class="system"></p>
+                </div>
+                <div id="desc"></div>
+                <div class="download-code">
+                    
+                </div>
+                <div class="text-center tip">Scan the QR code to download</div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="shdow" id="mask">
-        <img id="mask-tip">
-    </div>
+<div class="shdow" id="mask">
+    <img id="mask-tip">
+</div>
 
-    <div class="shdow" id="modal">
-        <div class="modal">
-            <div class="modal-head">
-                <p>安装提示</p>
-            </div>
-            <div class="modal-body">
-                <p>文件下载完成，请点击“立即安装”按钮</p>
-                <div class="modal-btn-wrap">
-                    <button type="button" class="btn btn-bor" onclick="hideModal()">关闭</button>
-                    <button type="button" class="btn btn-main" onclick="openMobileConfig()">立即安装</button>
-                </div>
+<div class="shdow" id="modal">
+    <div class="modal">
+        <div class="modal-head">
+            <p>Installation Prompt</p>
+        </div>
+        <div class="modal-body">
+            <p>The file has finished downloading. Please click the "Install Now" button.</p>
+            <div class="modal-btn-wrap">
+                <button type="button" class="btn btn-bor" onclick="hideModal()">Close</button>
+                <button type="button" class="btn btn-main" onclick="openMobileConfig()">Install Now</button>
             </div>
         </div>
     </div>
+</div>
 
     <script>
         var browser = {
@@ -117,14 +117,14 @@
 		var dir = 'qx';//文件夹名字
         var system = {
             '1': {
-                'name': '奇偶猫',
+                'name': 'VIP555',
                 'version' : '1.0.1',
                 'size': '3.51M',
                 'time': '2021-3-15 17:00:00',
 				'desc': '',//描述
             },
             '2': {
-                'name': '奇偶猫',
+                'name': 'VIP555',
                 'version' : '1.0.1',
                 'size': '3.51M',
                 'time': '2021-3-15 17:00:00',
@@ -141,12 +141,12 @@
                 platform = 1;
             }
             info_html+='<h2 class="name">'+system[platform].name+'</h2>'
-            info_html+='<p class="name-info pc-pwd"><span>版本: '+system[platform].version+' </span><span>大小: '+system[platform].size+' </span><br><span>更新时间: '+system[platform].time+'</span></p>'
+            info_html+='<p class="name-info pc-pwd"><span>Version: '+system[platform].version+' </span><span>size: '+system[platform].size+' </span><br><span>Update time: '+system[platform].time+'</span></p>'
             $('.info').html(info_html);
-            $('.system').text(platform==1?'适用于苹果':'适用于安卓');
+            $('.system').text(platform==1?'For Apple':'For Android');
 			if (system[platform].desc) {
 				var html='<div class="desc">';
-				html+='<span class="title">描述：</span>';
+				html+='<span class="title">describe：</span>';
 				html+=system[platform].desc;
 				html+='</div>';
 				$('#desc').html(html);
